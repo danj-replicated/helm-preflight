@@ -5,8 +5,8 @@
 ## requirements:
 
 - have preflight binary built from this branch: https://github.com/danj-replicated/troubleshoot/tree/fetch in your $PATH
+- you must have a helm-chart release in replicated vendor portal
 - have helm installed
-- your preflight.yaml must be at the root level of your helm chart
 
 ## install
 
