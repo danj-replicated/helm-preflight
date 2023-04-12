@@ -11,6 +11,7 @@ cleanup () {
 # extract helm archive
 case "$1" in
   *://*)
+    printf "%s\n" "Pulling chart..."
     # if our chart location looks like a url, pull and extract it
     helm pull -d "${pull_dir}" --untar --untardir "${render_dir}" "$1"
     ;;
