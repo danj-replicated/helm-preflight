@@ -18,7 +18,7 @@ helm plugin install https://github.com/danj-replicated/helm-preflight
 ## usage
 
 ```bash
-helm preflight oci://registry.replicated.com/app appname
+helm preflight oci://registry.replicated.com/app
 ```
 
 ## TODO

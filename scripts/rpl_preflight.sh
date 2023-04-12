@@ -12,8 +12,10 @@ cleanup () {
 case "$1" in
   *://*)
     printf "%s\n" "Pulling chart..."
+    # can probably assume this
+    chartname=$(basename $1)
     # if our chart location looks like a url, pull and extract it
-    helm pull -d "${pull_dir}" --untar --untardir "${render_dir}" "$1/$2"
+    helm pull -d "${pull_dir}" --untar --untardir "${render_dir}" "$1/$chartname"
     ;;
   *.tgz)
     # if our chart location looks like a tgz, extract it
