@@ -18,9 +18,7 @@ helm plugin install https://github.com/danj-replicated/helm-preflight
 ## usage
 
 ```bash
-helm preflight oci://some.registry/chart
-
-helm preflight ./chart
+helm preflight oci://registry.replicated.com/app appname
 ```
 
 ## TODO
