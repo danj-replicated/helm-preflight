@@ -11,8 +11,6 @@
 
 ## install
 
-temporary install instructions while because the repo is private
-
 ```bash
 helm plugin install https://github.com/danj-replicated/helm-preflight
 
