@@ -1,6 +1,6 @@
 #!/bin/bash
 
-render_dir=$(mktemp -d)
+render_dir="$(mktemp -d)"
 pull_dir="$(mktemp -d)"
 
 cleanup () {
@@ -17,7 +17,7 @@ case "$1" in
     ;;
   *)
     # otherwise just try and extract it
-    tar -C ${render_dir} -xvf $1
+    tar -C "${render_dir}" -xvf "$1"
     ;;
 esac
 
