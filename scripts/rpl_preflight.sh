@@ -22,7 +22,7 @@ case "$1" in
   *)
     # if not it's probably just a directory I guess?
     if [[ -d "$1" ]]; then
-      cp "$1" "${render_dir}"
+      cp -r "$1" "${render_dir}"
     else
       # exit if it's not though, we don't want to confuse helm
       printf "%s\n" "I'm not sure what your chart repo actually is."
