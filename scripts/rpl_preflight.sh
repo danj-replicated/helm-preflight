@@ -13,8 +13,6 @@ case "$1" in
   oci://*)
     # if our chart location looks like an OCI registry, pull and extract it
     helm pull -d "${pull_dir}" --untar --untardir "${render_dir}" "$1"
-    ls ${pull_dir}
-    ls "${render_dir}"
     ;;
   *)
     # otherwise just try and extract it
