@@ -13,7 +13,7 @@ case "$1" in
   *://*)
     printf "%s\n" "Pulling chart..."
     # if our chart location looks like a url, pull and extract it
-    helm pull -d "${pull_dir}" --untar --untardir "${render_dir}" "$1"
+    helm pull -d "${pull_dir}" --untar --untardir "${render_dir}" "$1/$2"
     ;;
   *.tgz)
     # if our chart location looks like a tgz, extract it
@@ -34,7 +34,7 @@ esac
 # inject preflight.yaml into templates and render
 # piping into preflight for actual checks
 while read chart ; do
-  cp "${render_dir}/$chart/preflight.yaml" "${render_dir}/$chart/templates"
+  preflight fetch "$1" > "${render_dir}/${chart}/templates/preflight.yaml"
   ${HELM_BIN} template "${render_dir}/$chart" | preflight -
 done < <(ls "${render_dir}")
 
