@@ -4,10 +4,9 @@
 
 ## requirements:
 
-- have preflight binary built from this branch: https://github.com/danj-replicated/troubleshoot/tree/preflight-stdin
+- have preflight binary built from this branch: https://github.com/danj-replicated/troubleshoot/tree/preflight-stdin in your $PATH
 - have helm installed
 - your preflight.yaml must be at the root level of your helm chart
-- have helm installed
 
 ## install
 
