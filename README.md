@@ -14,9 +14,7 @@
 temporary install instructions while because the repo is private
 
 ```bash
-git clone git@github.com:danj-replicated/helm-preflight.git
-cd helm-preflight
-helm plugin install .
+helm plugin install https://github.com/danj-replicated/helm-preflight
 
 ```
 
