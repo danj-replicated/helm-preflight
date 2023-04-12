@@ -1,0 +1,4 @@
+name: "preflight"
+usage: "helm preflight"
+description: "Run troubleshoot.sh's preflight against your replicated release chart"
+command: $HELM_PLUGIN_DIR/scripts/rpl_preflight.sh
