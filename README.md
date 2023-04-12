@@ -11,7 +11,14 @@
 
 ## install
 
-`helm plugin install ...`
+temporary install instructions while because the repo is private
+
+```bash
+git clone git@github.com:danj-replicated/helm-preflight.git
+cd helm-preflight
+helm plugin install .
+
+```
 
 ## usage
 
