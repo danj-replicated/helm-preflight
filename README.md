@@ -23,3 +23,7 @@ helm preflight oci://some.registry/chart
 
 helm preflight ./chart
 ```
+
+## TODO
+
+Add an `--apply` flag to apply chart if preflights pass
